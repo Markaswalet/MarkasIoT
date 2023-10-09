@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "338496533489",
+    "firebase_url": "https://latihan-kirim-data-esp32-d08f3-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "latihan-kirim-data-esp32-d08f3",
+    "storage_bucket": "latihan-kirim-data-esp32-d08f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338496533489:android:36c8dc34ae5f7a6db40a50",
+        "android_client_info": {
+          "package_name": "com.example.markasiot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338496533489-auctqsbb0866424d85n90fb7v8qkfnv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI_4-mwastkT31bxdma9ev9tnUg4cX8e4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338496533489-auctqsbb0866424d85n90fb7v8qkfnv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
