@@ -308,7 +308,7 @@ fun mainPage(){
 @Composable
 fun mainPagePreview(){
 
-   val pagerState = rememberPagerState (pageCount = {3}, initialPage = 0)
+    val pagerState = rememberPagerState {3}
         HorizontalPager(
             state = pagerState,
             userScrollEnabled = true
