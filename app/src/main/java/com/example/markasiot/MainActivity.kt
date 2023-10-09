@@ -304,25 +304,7 @@ fun mainPage(){
 
 }
 
-@OptIn(ExperimentalFoundationApi::class)
-@Composable
-fun mainPagePreview(){
 
-   val pagerState = rememberPagerState (pageCount = {3}, initialPage = 0)
-        HorizontalPager(
-            state = pagerState,
-            userScrollEnabled = true
-        ) {
-            page ->
-            when(page){
-                0 -> PrimaryBox(id = 1, suhu = 32, kelembapan = 55, gas = 3)
-                1 -> PrimaryBox(id = 2, suhu = 35, kelembapan = 45, gas = 4)
-                2 -> PrimaryBox(id = 3, suhu = 22, kelembapan = 75, gas = 7)
-            }
-
-        }
-
-}
 
 @Composable
 fun PrimaryBox(id : Any, suhu: Any, kelembapan: Any, gas: Any, modifier: Modifier= Modifier){
