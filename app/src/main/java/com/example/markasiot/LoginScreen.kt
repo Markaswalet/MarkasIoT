@@ -144,7 +144,7 @@ fun Bottom(
     ) {
         Image(painter = painterResource(id = R.drawable.google),
             contentDescription ="",
-            modifier = Modifier.size(36.dp)
+            modifier = Modifier.size(35.dp)
             )
         Spacer(modifier = Modifier.width(12.dp))
         Text(
