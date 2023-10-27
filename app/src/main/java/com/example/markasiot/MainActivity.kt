@@ -308,7 +308,7 @@ fun mainPage(){
 @Composable
 fun mainPagePreview(){
 
-   val pagerState = rememberPagerState (pageCount = {3}, initialPage = 0)
+    val pagerState = rememberPagerState {3}
         HorizontalPager(
             state = pagerState,
             userScrollEnabled = true
@@ -317,7 +317,7 @@ fun mainPagePreview(){
             when(page){
                 0 -> PrimaryBox(id = 1, suhu = 32, kelembapan = 55, gas = 3)
                 1 -> PrimaryBox(id = 2, suhu = 35, kelembapan = 45, gas = 4)
-                2 -> PrimaryBox(id = 3, suhu = 22, kelembapan = 75, gas = 7)
+                2 -> PrimaryBox(id = 3, suhu = 22, kelembapan = 75, gas = 9)
             }
 
         }
