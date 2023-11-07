@@ -74,7 +74,7 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier
                             .padding(8.dp)
                     ){
-                        LoginScreen()
+                        MainScreen()
                     }
                 }
             }
