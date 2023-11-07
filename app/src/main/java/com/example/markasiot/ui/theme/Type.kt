@@ -11,13 +11,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.example.markasiot.R
 
-val satoshiFamily = FontFamily(
-    Font(R.font.satoshi_black, FontWeight.Black),
-    Font(R.font.satoshi_bold, FontWeight.Bold),
-    Font(R.font.satoshi_medium,FontWeight.Medium),
-    Font(R.font.satoshi_regular, FontWeight.Normal),
-    Font(R.font.satoshi_light, FontWeight.Light)
+val PlusJakartaSans = FontFamily(
+    Font(R.font.plus_jakarta_sans_regular, FontWeight.Normal),
+    Font(R.font.plus_jakarta_sans_bold, FontWeight.Bold),
+    Font(R.font.plus_jakarta_sans_medium,FontWeight.Medium),
+    Font(R.font.plus_jakarta_sans_medium, FontWeight.Medium),
+    Font(R.font.plus_jakarta_sans_extra_bold, FontWeight.ExtraBold)
 )
+
 
 
 // Set of Material typography styles to start with
