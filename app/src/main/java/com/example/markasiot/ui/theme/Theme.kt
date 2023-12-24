@@ -86,6 +86,6 @@ fun MarkasIoTTheme(
   MaterialTheme(
     colorScheme = colors,
     content = content,
-      typography = Typography
+      typography = typograph
   )
 }

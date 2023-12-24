@@ -4,9 +4,13 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentSender
 import com.example.markasiot.R
+import com.google.android.gms.auth.GoogleAuthUtil
 import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.identity.BeginSignInRequest.GoogleIdTokenRequestOptions
 import com.google.android.gms.auth.api.identity.SignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -43,7 +47,9 @@ class GoogleAuthUiClient(
                     UserData(
                         userId = uid,
                         username = displayName,
-                        profilePictureUrl = photoUrl?.toString()
+                        profilePictureUrl = photoUrl.toString(),
+                        email = email,
+                        phoneNumber = phoneNumber
                     )
                 },
                 errorMessage = null
@@ -58,6 +64,8 @@ class GoogleAuthUiClient(
         }
     }
 
+
+
     suspend fun signOut(){
         try {
             oneTapclient.signOut().await()
@@ -69,11 +77,13 @@ class GoogleAuthUiClient(
         }
     }
 
-    fun getSignedInUser(): UserData? = auth.currentUser?.run {
+    fun getSignedInUser(): UserData? = auth.currentUser?.let {
         UserData(
-            userId = uid,
-            username= displayName,
-            profilePictureUrl = photoUrl?.toString()
+            userId = it.uid,
+            username= it.displayName,
+            profilePictureUrl = it.photoUrl.toString(),
+            email = it.email,
+            phoneNumber = it.phoneNumber
         )
     }
 
@@ -83,7 +93,7 @@ class GoogleAuthUiClient(
                 GoogleIdTokenRequestOptions.builder()
                     .setSupported(true)
                     .setFilterByAuthorizedAccounts(false)
-                    .setServerClientId(context.getString(R.string.web_client_id))
+                    .setServerClientId(context.getString(R.string. web_client_id))
                     .build()
             )
             .setAutoSelectEnabled(true)

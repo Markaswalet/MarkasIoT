@@ -1,4 +1,4 @@
-package com.example.markasiot
+package com.example.markasiot.presentation.boarding
 
 
 import androidx.compose.foundation.Image
@@ -6,7 +6,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Divider
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -21,17 +20,18 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.markasiot.R
 import com.example.markasiot.ui.theme.MarkasIoTTheme
 import com.example.markasiot.ui.theme.PlusJakartaSans
 
 @Composable
-fun First() {
+fun BoardingPage() {
     MarkasIoTTheme {
         Surface(
             modifier = Modifier,
             color = MaterialTheme.colorScheme.background
         ) {
-            Tp(
+            MainPage(
                 modifier = Modifier
             )
         }
@@ -39,7 +39,7 @@ fun First() {
 }
 
 @Composable
-fun Tp(modifier: Modifier = Modifier) {
+fun MainPage(modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .fillMaxWidth()
@@ -134,7 +134,7 @@ fun Tp(modifier: Modifier = Modifier) {
                         text = "Mulai sekarang!",
                         fontSize = 24.sp,
                         fontFamily = PlusJakartaSans,
-                        fontWeight = FontWeight.Normal,
+                        fontWeight = FontWeight.Medium,
                         color = MaterialTheme.colorScheme.onPrimary
                     )
                 }
@@ -149,5 +149,5 @@ fun Tp(modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun AppPreview() {
-    First()
+    BoardingPage()
 }

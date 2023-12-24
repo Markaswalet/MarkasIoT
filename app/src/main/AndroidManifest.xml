@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".IoTApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,8 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MarkasIoT"
         tools:targetApi="31">
+
         <activity
-            android:name=".LoginScreen"
+            android:name=".presentation.sign_in.LoginScreen"
             android:exported="false"
             android:label="@string/title_activity_login_screen"
             android:theme="@style/Theme.MarkasIoT" />
@@ -24,7 +26,6 @@
             android:theme="@style/Theme.MarkasIoT">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

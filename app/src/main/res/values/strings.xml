@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">MarkasIoT</string>
     <string name="title_activity_login_screen">LoginScreen</string>
+    <string name="web_client_id">338496533489-50o6525djd4rfgqq43ekdc8sc71bjson.apps.googleusercontent.com</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="title_activity_profilescreen">Profilescreen</string>
+
 </resources>
